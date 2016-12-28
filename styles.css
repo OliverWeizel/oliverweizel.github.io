@@ -12,5 +12,6 @@ p {
     border: 3px solid black;
 }
 #linkedin {
+  display: block;
   margin: auto;
 }
