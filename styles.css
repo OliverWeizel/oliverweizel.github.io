@@ -8,3 +8,9 @@ p {
   text-align: center;
   font-size: 32px;
 }
+.img-circle {
+    border-radius: 50%;
+}
+#linkedin {
+  margin: auto;
+}
