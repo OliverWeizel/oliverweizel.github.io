@@ -12,16 +12,10 @@ p {
   font-size: 32px;
 }
 .icon {
-    border: 3px solid black;
+    display: inline-block;
 }
 #linkedin {
-  display: block;
   margin: auto;
-  position: relative
 }
 #mail {
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 50px;
 }
