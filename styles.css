@@ -12,7 +12,8 @@ p {
   font-size: 32px;
 }
 .icon {
-    display: inline-block;
+  display: inline-block;
+  vertical-align: middle;
 }
 #linkedin {
   margin: auto;
