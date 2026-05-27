@@ -301,37 +301,38 @@ main {
   display: grid;
   place-items: center;
   padding: 2rem 1.5rem;
-  max-width: var(--content);
-  margin: 0 auto;
 }
 
 #gate-form {
   width: 100%;
   max-width: 22rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
-#gate h1 {
+#gate-form h1 {
   font-family: var(--serif);
   font-weight: 500;
   font-size: 1.5rem;
+  line-height: 1.2;
   margin: 0 0 0.5rem;
 }
 
-#gate > #gate-form > p {
+#gate-form > p:first-of-type {
   color: var(--muted);
   font-size: 0.9375rem;
-  margin: 0 0 1.5rem;
+  line-height: 1.5;
+  margin: 0 0 1.75rem;
 }
 
-#gate label {
-  display: block;
+#gate-form label {
   font-size: 0.875rem;
   color: var(--muted);
   margin: 0 0 0.375rem;
 }
 
-#gate input {
-  width: 100%;
+#gate-form input {
   padding: 0.625rem 0.75rem;
   font-family: inherit;
   font-size: 1rem;
@@ -339,17 +340,18 @@ main {
   background: #fff;
   border: 1px solid var(--rule);
   border-radius: 3px;
+  margin: 0 0 1rem;
 }
 
-#gate input:focus {
+#gate-form input:focus {
   outline: 2px solid var(--accent);
   outline-offset: 1px;
   border-color: var(--text);
 }
 
-#gate button {
-  margin-top: 0.75rem;
-  padding: 0.625rem 1rem;
+#gate-form button {
+  align-self: flex-start;
+  padding: 0.625rem 1.25rem;
   font-family: inherit;
   font-size: 0.9375rem;
   color: var(--bg);
@@ -359,13 +361,18 @@ main {
   cursor: pointer;
 }
 
-#gate button:hover {
+#gate-form button:hover {
   background: var(--accent);
 }
 
 #gate-error {
-  margin-top: 0.875rem;
+  margin: 0.875rem 0 0;
   color: var(--accent);
   font-size: 0.875rem;
   min-height: 1.25rem;
+}
+
+#gate-error:empty {
+  margin: 0;
+  min-height: 0;
 }
