@@ -11,8 +11,12 @@
 
   <!-- Password gate — remove this block (and password-gate.js, and the
        gate rules in style.css) when going public. -->
-  <style>html.gated body{visibility:hidden}</style>
-  <script>try{if(sessionStorage.getItem("site-unlocked-v1")!=="1")document.documentElement.classList.add("gated")}catch(e){}</script>
+  <style>
+    html.gated body {
+      visibility: hidden
+    }
+  </style>
+  <script>try { if (sessionStorage.getItem("site-unlocked-v1") !== "1") document.documentElement.classList.add("gated") } catch (e) { }</script>
   <script src="password-gate.js" defer></script>
   <!-- /Password gate -->
 </head>
