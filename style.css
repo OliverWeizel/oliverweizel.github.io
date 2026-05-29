@@ -12,23 +12,32 @@
 
 *,
 *::before,
-*::after { box-sizing: border-box; }
+*::after {
+  box-sizing: border-box;
+}
 
-html { -webkit-text-size-adjust: 100%; }
+html {
+  -webkit-text-size-adjust: 100%;
+}
 
 body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: var(--sans);
+  font-family: var(--serif);
   font-size: 1.0625rem;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a { color: var(--text); }
-a:hover { color: var(--accent); }
+a {
+  color: var(--text);
+}
+
+a:hover {
+  color: var(--accent);
+}
 
 :focus-visible {
   outline: 2px solid var(--accent);
@@ -41,6 +50,7 @@ a:hover { color: var(--accent); }
   left: -9999px;
   top: 0;
 }
+
 .skip-link:focus {
   left: 1rem;
   top: 1rem;
@@ -154,7 +164,7 @@ main {
 }
 
 .intro .lede,
-.projects > h2 {
+.projects>h2 {
   font-family: var(--serif);
   font-weight: 500;
   font-size: 1.125rem;
@@ -209,7 +219,7 @@ main {
   border-top: 1px solid var(--rule);
 }
 
-.project-list > li {
+.project-list>li {
   border-bottom: 1px solid var(--rule);
 }
 
@@ -235,7 +245,9 @@ main {
   font-size: 0.9375rem;
 }
 
-.project-body { display: block; }
+.project-body {
+  display: block;
+}
 
 .project-title {
   font-family: var(--serif);
@@ -307,9 +319,20 @@ main {
   line-height: 1.2;
 }
 
-.post h2 { font-size: 1.375rem; margin: 2rem 0 0.75rem; }
-.post h3 { font-size: 1.125rem; margin: 1.5rem 0 0.5rem; }
-.post h4 { font-size: 1rem; margin: 1.25rem 0 0.5rem; }
+.post h2 {
+  font-size: 1.375rem;
+  margin: 2rem 0 0.75rem;
+}
+
+.post h3 {
+  font-size: 1.125rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.post h4 {
+  font-size: 1rem;
+  margin: 1.25rem 0 0.5rem;
+}
 
 .post a {
   color: var(--accent);
@@ -381,7 +404,9 @@ main {
   border-top: 1px solid var(--rule);
 }
 
-.site-footer p { margin: 0; }
+.site-footer p {
+  margin: 0;
+}
 
 /* ---------------------------------------------------------------
    Password gate — remove this section when going public
@@ -413,7 +438,7 @@ main {
   margin: 0 0 0.5rem;
 }
 
-#gate-form > p:first-of-type {
+#gate-form>p:first-of-type {
   color: var(--muted);
   font-size: 0.9375rem;
   line-height: 1.5;
