@@ -1,6 +1,7 @@
 // Password gate — soft access gate for pre-launch testing.
-// Remove this file (and the gate <style>/<script> block in each HTML <head>,
-// and the "Password gate" rules at the bottom of style.css) when going public.
+// Remove this file (and the gate <style>/<script> block in
+// _layouts/default.html, and the "Password gate" rules at the bottom of
+// style.css) when going public.
 //
 // Note: this is not real security. The HTML is still served as-is from
 // GitHub Pages, so anyone who fetches the raw file or inspects the page

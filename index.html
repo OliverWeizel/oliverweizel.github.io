@@ -1,32 +1,12 @@
-<!doctype html>
-<html lang="en">
+---
+layout: default
+---
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Oliver Weizel</title>
-  <meta name="description" content="Personal website of Oliver Weizel.">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="data:,">
-
-  <!-- Password gate — remove this block (and password-gate.js, and the
-       gate rules in style.css) when going public. -->
-  <style>
-    html.gated body {
-      visibility: hidden
-    }
-  </style>
-  <script>try { if (sessionStorage.getItem("site-unlocked-v1") !== "1") document.documentElement.classList.add("gated") } catch (e) { }</script>
-  <script src="password-gate.js" defer></script>
-  <!-- /Password gate -->
-</head>
-
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <a href="/" class="brand" aria-label="Oliver Weizel — home">Oliver Weizel</a>
-    <nav aria-label="Primary">
+<section class="intro">
+  <div class="intro-text">
+    <h1>Oliver Weizel</h1>
+    <p class="email">oliverlwweizel [at] gmail [dot] com</p>
+    <nav class="intro-nav" aria-label="Primary">
       <ul>
         <li><a href="#">About</a></li>
         <li><a href="#">Writing</a></li>
@@ -34,70 +14,45 @@
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
-  </header>
+    <h2 class="lede">about</h2>
+    <p>
+      I completed my undergrad at <strong>Princeton</strong> in 2025, studying
+      <strong>computer science</strong> and <strong>linguistics</strong>. I’m interested in using my background in
+      theoretical linguistics to <strong>study how LLMs use Language</strong>, and using my background in
+      computer science to <strong>understand how humans use Language</strong>.
+    </p>
+    <p>
+      I also <strong>used to run a startup</strong> trying to create a <strong>RAG system</strong> for writing
+      tax documentation for multinational companies (transfer pricing). We ended up getting
+      beat to market, but I value the experience I gained <strong>leading a small team of developers</strong>.
+    </p>
+    <p>
+      I’m currently pursuing my research independently. You can make me less independent by
+      <strong>hiring me.</strong> <em>Go on… You already have my email…</em>
+    </p>
+  </div>
 
-  <main id="main">
-    <section class="intro">
-      <div class="intro-text">
-        <h1>Oliver Weizel</h1>
-        <p class="lede">
-          [One-sentence introduction — what you do, in your own words.]
-        </p>
-        <p>
-          [A short paragraph about yourself. Where you live, what you&rsquo;re
-          working on, what you care about. Two or three sentences is plenty.]
-        </p>
-        <p>
-          [Optional second paragraph for anything that didn&rsquo;t fit above —
-          past work, background, or a personal note.]
-        </p>
-      </div>
+  <figure class="portrait">
+    <!-- Replace this placeholder with: <img src="photo.jpg" alt="Photo of Oliver Weizel" width="560" height="560"> -->
+    <div class="portrait-placeholder" role="img" aria-label="Portrait placeholder">
+      <span>your photo</span>
+    </div>
+  </figure>
+</section>
 
-      <figure class="portrait">
-        <!-- Replace this placeholder with: <img src="photo.jpg" alt="Photo of Oliver Weizel" width="560" height="560"> -->
-        <div class="portrait-placeholder" role="img" aria-label="Portrait placeholder">
-          <span>your photo</span>
-        </div>
-      </figure>
-    </section>
-
-    <section class="projects" aria-labelledby="projects-heading">
-      <h2 id="projects-heading">Projects</h2>
-      <ul class="project-list">
-        <li>
-          <a href="projects/first-project.html">
-            <span class="project-year">2026</span>
-            <span class="project-body">
-              <span class="project-title">First project</span>
-              <span class="project-blurb">A short, one-line description of what it is.</span>
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="projects/second-project.html">
-            <span class="project-year">2025</span>
-            <span class="project-body">
-              <span class="project-title">Second project</span>
-              <span class="project-blurb">Another short description, ideally under a sentence.</span>
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="projects/third-project.html">
-            <span class="project-year">2024</span>
-            <span class="project-body">
-              <span class="project-title">Third project</span>
-              <span class="project-blurb">Whatever this one is about, in plain language.</span>
-            </span>
-          </a>
-        </li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>&copy; 2026 Oliver Weizel</p>
-  </footer>
-</body>
-
-</html>
+<section class="projects" aria-labelledby="projects-heading">
+  <h2 id="projects-heading">projects</h2>
+  <ul class="project-list">
+    {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url | relative_url }}">
+        <span class="project-year">{{ post.date | date: "%Y" }}</span>
+        <span class="project-body">
+          <span class="project-title">{{ post.title }}</span>
+          <span class="project-blurb">{{ post.description }}</span>
+        </span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

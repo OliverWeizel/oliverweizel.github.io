@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<article class="post">
+  <p class="post-back"><a href="{{ '/' | relative_url }}">&larr; Back</a></p>
+  <p class="post-eyebrow">
+    {{- page.date | date: "%Y" -}}
+    {%- if page.type %} &middot; {{ page.type }}{% endif -%}
+  </p>
+  <h1>{{ page.title }}</h1>
+  {{ content }}
+</article>

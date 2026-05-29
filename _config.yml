@@ -1,0 +1,12 @@
+title: Oliver Weizel
+description: Personal website of Oliver Weizel.
+
+permalink: /posts/:title/
+markdown: kramdown
+
+exclude:
+  - readme.md
+  - claude.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
