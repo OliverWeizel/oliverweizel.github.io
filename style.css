@@ -118,7 +118,7 @@ main {
   font-size: clamp(2.75rem, 1.8rem + 3.6vw, 4rem);
   line-height: 1.05;
   letter-spacing: -0.015em;
-  margin: 0 0 0.125rem;
+  margin: 0 0 0.5rem;
 }
 
 .intro p {
@@ -130,7 +130,7 @@ main {
   color: var(--muted);
   font-size: 1rem;
   letter-spacing: 0.005em;
-  margin: 0 0 1.25rem;
+  margin: 0 0 0.5rem;
 }
 
 .intro-nav ul {
